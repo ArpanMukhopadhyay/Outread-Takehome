@@ -1,0 +1,12 @@
+No. Clusters: 3
+
+No. papers per cluster:
+cluster
+0    44
+1    16
+2    11
+
+Top 10 terms in each cluster:
+Cluster 0: energi, system, solar, power, grid, electr, pv, batteri, wind, gener
+Cluster 1: reaction, electrod, catalyst, hydrogen, activ, electrolysi, product, materi, nanoparticl, water
+Cluster 2: ammonia, hydrogen, green, fuel, energi, product, cost, sourc, use, methanol
