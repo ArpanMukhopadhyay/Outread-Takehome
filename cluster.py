@@ -2,7 +2,6 @@
 import numpy as np 
 import pandas as pd
 import PyPDF2
-from urllib.parse import urlparse
 import re
 import os
 import nltk
@@ -12,7 +11,7 @@ from nltk.stem import WordNetLemmatizer
 from nltk.stem import PorterStemmer
 from sklearn.feature_extraction.text import TfidfVectorizer
 from sklearn.metrics import silhouette_score, davies_bouldin_score
-import fitz
+import pymupdf
 from sklearn.cluster import KMeans
 import matplotlib.pyplot as plt
 from helper import *
@@ -28,7 +27,6 @@ nltk.download('wordnet')
 
 # %%
 df = pd.read_csv('data.csv')
-df.head
 
 df['Abstract'] = None
 def extract_all_abstracts(directory_path):

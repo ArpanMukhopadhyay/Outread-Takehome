@@ -1,8 +1,6 @@
 import numpy as np 
 import pandas as pd
-import requests
 import PyPDF2
-from urllib.parse import urlparse
 import re
 import nltk
 from nltk.corpus import stopwords
@@ -11,18 +9,16 @@ from nltk.stem import WordNetLemmatizer
 from nltk.stem import PorterStemmer
 from sklearn.feature_extraction.text import TfidfVectorizer
 from sklearn.metrics import silhouette_score, davies_bouldin_score, calinski_harabasz_score
-import fitz
+import pymupdf
 from sklearn.cluster import KMeans
 import matplotlib.pyplot as plt
-import helper
 from sklearn.metrics import silhouette_score
 from sklearn.decomposition import PCA
 import matplotlib.pyplot as plt
 
 
 def extract_abstract(pdf_path):
-    doc = fitz.open(pdf_path)
-    
+    doc = pymupdf.open(pdf_path)
     text = ""
     for page_num in range(3): 
         page = doc.load_page(page_num)
