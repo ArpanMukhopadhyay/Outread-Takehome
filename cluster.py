@@ -47,7 +47,7 @@ def extract_all_abstracts(directory_path):
             abstracts[filename] = None
     return abstracts
 
-abstract_text = extract_all_abstracts('data')
+abstract_text = extract_all_abstracts('papers')
 
 new_df = df[['Name','Abstract']]
 
